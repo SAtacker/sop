@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper, 12pt]{article}
-\usepackage[a4paper,margin=1.0in,noheadfoot]{geometry}
+\usepackage[a4paper,margin=1.0in,includehead]{geometry}
 \usepackage{fontspec, color, enumerate, sectsty}
 \usepackage[normalem]{ulem}
 
@@ -19,6 +19,8 @@
 \newcommand{\youremail}{shreyasatre16@gmail.com}
 \newcommand{\purpose}{Masters in Computer Science}
 \newcommand{\university}{Georgia Institute of Technology}
+\newcommand{\currentUniversity}{Veermata Jijabai Technological Institute}
+\newcommand{\currentDegree}{B.Tech. Electronics and Telecommunications}
 
 %% FONTS SETUP
 \defaultfontfeatures{Mapping=tex-text}
@@ -29,13 +31,23 @@ pdftitle={\yourname - \soptitle},pdfauthor={\yourname}, unicode]{hyperref}
 \hypersetup{linkcolor=magneta,citecolor=magenta,filecolor=magenta,urlcolor=[named]{WildStrawberry}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Header
+\usepackage{fancyhdr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      Title and Author Name
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\begin{center}{\large \scshape \hspace{1pt} \yourname \hspace{200pt}  \youremail }\end{center}
-\hrule
-\begin{center}{\Large \scshape \soptitle \hspace{1pt} }\end{center}
-\begin{center}{\large \scshape \purpose \hspace{1pt} $-$ \hspace{1pt} \university}\end{center}
+\addtolength{\topmargin}{-28.20839pt}
+\thispagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{\small \scshape \currentUniversity \\ \currentDegree \\ \\}
+\fancyhead[L]{\small \scshape \yourname \\ \youremail \\ \\}
+\fancyhead[C]{\large \scshape \textbf{\soptitle}}
+\vspace*{0.1em}
+\begin{center}{\large \scshape \purpose \hspace{1pt} $-$ \hspace{1pt} \university }\end{center}
+% \hrule
+% \begin{center}{\Large \scshape  \hspace{1pt} }\end{center}
+% \begin{center}{\large \scshape }\end{center}
 % \begin{center}\vspace{0.2em} {\Large \yourname\\}
 %   {\youremail}\end{center}
 
